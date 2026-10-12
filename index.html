@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ivory:#F9F7F3;--ivory-warm:#F5F2EC;--taupe:#D6CFC7;--gold:#C9B26B;--gold-light:#D4C48A;--onyx:#1F1E1B;--charcoal:#3A3835;--stone:#6B665E;--mist:#9E9890}
+:root{--ivory:#F9F7F3;--ivory-warm:#F5F2EC;--taupe:#D6CFC7;--gold:#C9B26B;--gold-light:#D4C48A;--onyx:#1F1E1B;--charcoal:#3A3835;--stone:#6B665E;--mist:#9E9890;--gold-deep:#86702F}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'Outfit',sans-serif;background:var(--ivory);color:var(--charcoal);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -30,11 +30,11 @@ img{max-width:100%;display:block}
 .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .ham span{width:22px;height:1.5px;background:#fff;transition:all .3s}
 .nav.scrolled .ham span{background:var(--onyx)}
-.mm{position:fixed;inset:0;background:var(--onyx);z-index:99;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:40px;opacity:0;pointer-events:none;transition:opacity .4s}
+.mm{position:fixed;inset:0;background:var(--onyx);z-index:102;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:clamp(20px,4.5vh,40px);opacity:0;pointer-events:none;transition:opacity .4s}
 .mm.open{opacity:1;pointer-events:all}
 .mm a{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:var(--ivory);text-decoration:none;opacity:0;transform:translateY(20px);transition:all .4s}
 .mm.open a{opacity:1;transform:translateY(0)}
-.mm.open a:nth-child(1){transition-delay:.1s}.mm.open a:nth-child(2){transition-delay:.15s}.mm.open a:nth-child(3){transition-delay:.2s}.mm.open a:nth-child(4){transition-delay:.25s}.mm.open a:nth-child(5){transition-delay:.3s}.mm.open a:nth-child(6){transition-delay:.35s}
+.mm.open a:nth-child(1){transition-delay:.1s}.mm.open a:nth-child(2){transition-delay:.15s}.mm.open a:nth-child(3){transition-delay:.2s}.mm.open a:nth-child(4){transition-delay:.25s}.mm.open a:nth-child(5){transition-delay:.3s}.mm.open a:nth-child(6){transition-delay:.35s}.mm.open a:nth-child(7){transition-delay:.4s}.mm.open a:nth-child(8){transition-delay:.45s}.mm.open a:nth-child(9){transition-delay:.5s}
 .mm a:hover{color:var(--gold)}
 .mc{position:absolute;top:24px;right:28px;font-size:28px;color:var(--ivory);cursor:pointer;background:none;border:none;font-family:'Outfit';font-weight:300}
 @media(max-width:860px){.nav-links{display:none}.ham{display:flex}.nav{padding:0 24px}}
@@ -152,22 +152,119 @@ img{max-width:100%;display:block}
 .venue-strip img{width:100%;height:240px;object-fit:cover}
 .venue-cap{grid-column:1/-1;text-align:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:var(--mist);margin-top:4px}
 @media(max-width:600px){.venue-strip img{height:180px}}
+
+/* ===== What to Wear ===== */
+#attire,#attire-beach,#attire-wedding{scroll-margin-top:72px}
+@media(max-width:1080px) and (min-width:861px){.nav-links{gap:24px}}
+.em-code{display:block;width:max-content;margin:14px auto 0;font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--gold-light);text-decoration:none;border-bottom:1px solid rgba(201,178,107,.35);line-height:1.3;transition:color .3s,border-color .3s}
+.em-code:hover{color:#fff;border-color:#fff}
+.det-cta{text-align:center}
+.det-cta p{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:rgba(255,255,255,.75);margin-bottom:24px}
+.det-cta a{display:inline-block;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);padding:14px 40px;text-decoration:none;border:1px solid rgba(201,178,107,.5);transition:all .3s}
+.det-cta a:hover{background:var(--gold);color:var(--onyx)}
+.wt{padding:128px 24px 96px}.wt-in{max-width:900px;margin:0 auto}
+.wt .sl{color:var(--gold-deep)}
+.wt-lede{font-family:'Outfit',sans-serif;font-size:15px;font-weight:300;line-height:1.85;color:var(--stone);text-align:center;max-width:500px;margin:0 auto 64px}
+.gl{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.gl-c{display:flex;flex-direction:column;padding:48px 40px 40px;text-decoration:none;border:1px solid var(--taupe);transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s,border-color .3s}
+.gl-c:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 8px 40px rgba(31,30,27,.1)}
+.gl-beach{background:linear-gradient(170deg,#FBF8F1 0%,#EFE6D5 100%)}
+.gl-wed{background:var(--onyx);border-color:var(--onyx)}
+.gl-n{font-family:'Outfit',sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px}
+.gl-wed .gl-n{color:var(--gold)}
+.gl-e{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--onyx);line-height:1.2}
+.gl-wed .gl-e{color:#fff}
+.gl-code{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.6vw,36px);font-weight:400;font-style:italic;color:var(--onyx);line-height:1.15;margin:28px 0 24px;padding-top:28px;border-top:1px solid rgba(134,112,47,.35)}
+.gl-wed .gl-code{color:var(--gold-light);border-top-color:rgba(201,178,107,.35)}
+.gl-code small{display:block;font-family:'Outfit',sans-serif;font-size:10px;font-weight:500;font-style:normal;letter-spacing:3px;text-transform:uppercase;color:var(--stone);margin-bottom:10px}
+.gl-wed .gl-code small{color:rgba(255,255,255,.5)}
+.gl-r{display:grid;grid-template-columns:108px 1fr;gap:16px;padding:13px 0;border-top:1px solid rgba(31,30,27,.08);align-items:baseline}
+.gl-wed .gl-r{border-top-color:rgba(255,255,255,.08)}
+.gl-r dt{font-family:'Outfit',sans-serif;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--stone)}
+.gl-wed .gl-r dt{color:rgba(255,255,255,.5)}
+.gl-r dd{font-family:'Outfit',sans-serif;font-size:14px;font-weight:400;color:var(--charcoal);line-height:1.5}
+.gl-wed .gl-r dd{color:rgba(255,255,255,.85)}
+.gl-r dd strong{font-weight:600;color:var(--onyx)}
+.gl-wed .gl-r dd strong{color:var(--gold-light)}
+.gl-go{margin-top:auto;padding-top:32px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep)}
+.gl-wed .gl-go{color:var(--gold)}
+@media(max-width:760px){.gl{grid-template-columns:1fr}.gl-c{padding:40px 24px 32px}.gl-r{grid-template-columns:96px 1fr;gap:12px}}
+.pn-k{font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:20px}
+.pn-code{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,7vw,68px);font-weight:300;font-style:italic;text-align:center;line-height:1.05;margin-bottom:20px}
+.pn-w{font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:40px}
+.pn-d{font-family:'Outfit',sans-serif;font-size:15px;font-weight:300;line-height:1.85;text-align:center;max-width:540px;margin:0 auto 16px}
+.pn-tag{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;font-style:italic;text-align:center;margin:0 auto 56px}
+.bw{padding:112px 24px;background:linear-gradient(180deg,#F5F2EC 0%,#EFE7D8 100%);border-top:1px solid var(--taupe)}
+.bw-in{max-width:900px;margin:0 auto}
+.bw .pn-k{color:var(--gold-deep)}.bw .pn-code{color:var(--onyx)}.bw .pn-w{color:var(--stone)}.bw .pn-d{color:var(--stone)}.bw .pn-tag{color:var(--gold-deep)}
+.bw .pal-row{margin:0 auto 64px}
+.bw .pal-swatch{border-color:rgba(31,30,27,.12)}
+.bw .pal-name{color:var(--stone)}
+@media(max-width:480px){.bw .pal-row{gap:24px 14px}.bw .pal-swatch{width:64px;height:64px}}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--taupe);border-bottom:1px solid var(--taupe)}
+.cg-c{padding:40px 28px;text-align:center}
+.cg-c+.cg-c{border-left:1px solid var(--taupe)}
+.cg-c h4{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--onyx);margin-bottom:20px}
+.cg-c p{font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;color:var(--charcoal);line-height:1.6;margin-bottom:10px}
+.cg-c p:last-child{margin-bottom:0}
+@media(max-width:760px){.cg{grid-template-columns:1fr}.cg-c{padding:32px 16px}.cg-c+.cg-c{border-left:none;border-top:1px solid var(--taupe)}}
+.pn-avoid{font-family:'Outfit',sans-serif;font-size:13px;font-weight:400;color:var(--stone);text-align:center;line-height:1.7;max-width:520px;margin:40px auto 0}
+.pn-avoid b{font-weight:600;color:var(--onyx);letter-spacing:2px;text-transform:uppercase;font-size:10px;display:block;margin-bottom:6px}
+.pn-x{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:var(--onyx);text-align:center;line-height:1.5;max-width:520px;margin:48px auto 0;padding-top:40px;border-top:1px solid var(--taupe)}
+.pn-x a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+.wd{background:var(--onyx);padding:112px 24px 128px;position:relative;overflow:hidden}
+.wd::before{content:'';position:absolute;top:-200px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,178,107,.06) 0%,transparent 70%);pointer-events:none}
+.wd-in{max-width:900px;margin:0 auto;position:relative}
+.wd .pn-k{color:var(--gold)}.wd .pn-code{color:#fff}.wd .pn-w{color:rgba(255,255,255,.55)}.wd .pn-d{color:rgba(255,255,255,.65)}.wd .pn-tag{color:var(--gold-light)}
+.wr{max-width:640px;margin:0 auto 72px;padding:44px 40px;border:1px solid var(--gold);background:rgba(201,178,107,.07);text-align:center}
+.wr-l{font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.wr-h{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,34px);font-weight:400;color:#fff;line-height:1.2;margin-bottom:16px}
+.wr p{font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;color:rgba(255,255,255,.75);line-height:1.8;max-width:480px;margin:0 auto}
+.wr p strong{font-weight:500;color:#fff}
+@media(max-width:600px){.wr{padding:36px 24px}}
+.lb{background:var(--ivory);color:var(--charcoal)}
+.lb-tabs{display:grid;grid-template-columns:1fr 1fr;background:#EAE5DB}
+.lb-tab{-webkit-appearance:none;appearance:none;border:none;border-top:3px solid transparent;background:transparent;padding:19px 12px 20px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--stone);cursor:pointer;transition:color .3s,background .3s}
+.lb-tab:hover{color:var(--onyx)}
+.lb-tab[aria-selected="true"]{background:var(--ivory);color:var(--onyx);border-top-color:var(--gold)}
+.lb-tab:focus-visible{outline:2px solid var(--gold-deep);outline-offset:-4px}
+.lb-p{padding:56px 48px 48px}
+.lb-p[hidden]{display:none}
+.lb-p+.lb-p{border-top:1px solid var(--taupe)}
+.lb-k{font-family:'Outfit',sans-serif;font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold-deep);text-align:center;margin-bottom:12px}
+.lb-t{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,56px);font-weight:400;font-style:italic;color:var(--onyx);text-align:center;line-height:1.1;margin-bottom:12px}
+.lb-s{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--stone);text-align:center;line-height:1.4;max-width:520px;margin:0 auto}
+.lb-g{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center;margin:44px 0 40px}
+.lb-r{padding:14px 0;border-top:1px solid rgba(134,112,47,.25)}
+.lb-r:last-child{border-bottom:1px solid rgba(134,112,47,.25)}
+.lb-r dt{font-family:'Outfit',sans-serif;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--onyx);margin-bottom:5px}
+.lb-r dd{font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;color:var(--charcoal);line-height:1.65}
+.lb-img img{width:100%;height:auto}
+.lb-sw{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 12px}
+.lb-sw div{width:76px;text-align:center;font-family:'Outfit',sans-serif;font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--stone);line-height:1.4}
+.lb-sw i{display:block;height:44px;margin-bottom:8px;border:1px solid rgba(31,30,27,.1)}
+.lb-note{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--charcoal);line-height:1.55;text-align:center;max-width:560px;margin:40px auto 0;padding-top:32px;border-top:1px solid rgba(134,112,47,.25)}
+.lb-note b{font-family:'Outfit',sans-serif;font-style:normal;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:8px}
+.lb-note strong{font-weight:600;font-style:normal;color:var(--onyx)}
+@media(max-width:760px){.lb-p{padding:40px 20px 36px}.lb-g{grid-template-columns:1fr;gap:28px;margin:32px 0}.lb-img{order:-1}.lb-sw div{width:68px}.lb-tab{letter-spacing:2px;font-size:10px;padding:17px 6px 18px}}
+.wd .att-note{margin-top:56px;color:rgba(255,255,255,.5)}
 </style>
 </head>
 <body>
 <div style="background:#1F1E1B;padding:10px 24px;text-align:center;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;z-index:101;position:relative">
-  <span style="font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#C9B26B">Room Block Closes June 1</span>
+  <span style="font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#C9B26B">Attire Guide Updated</span>
   <span style="color:rgba(255,255,255,.15);font-size:11px">&middot;</span>
-  <a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" style="font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:underline;text-underline-offset:3px">Reserve Your Room</a>
+  <a href="#attire" style="font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.7);text-decoration:underline;text-underline-offset:3px">See What to Wear</a>
 </div>
 <nav class="nav" id="nav">
   <a href="#" class="nav-logo">The Art of Relief</a>
-  <ul class="nav-links"><li><a href="#details">Details</a></li><li><a href="#travel">Travel</a></li><li><a href="#story">Our Story</a></li><li><a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener">RSVP</a></li><li><a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener">Registry</a></li><li><a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" class="nav-rsvp">Reserve</a></li></ul>
+  <ul class="nav-links"><li><a href="#details">Details</a></li><li><a href="#attire">Attire</a></li><li><a href="#travel">Travel</a></li><li><a href="#story">Our Story</a></li><li><a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener">RSVP</a></li><li><a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener">Registry</a></li><li><a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" class="nav-rsvp">Reserve</a></li></ul>
   <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mm" id="mm"><button class="mc" id="mc">&times;</button>
 <a href="#" onclick="cm()">Home</a>
 <a href="#details" onclick="cm()">Details</a>
+<a href="#attire" onclick="cm()">Attire</a>
 <a href="#travel" onclick="cm()">Travel</a>
 <a href="#story" onclick="cm()">Our Story</a>
 <a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" onclick="cm()">Reserve Your Room</a>
@@ -202,41 +299,141 @@ img{max-width:100%;display:block}
     <div class="sl rv">The Celebration</div>
     <h2 class="sh rv d1">Details</h2>
     <div class="eg rv d2">
-      <div class="ec"><div class="edt">Tuesday, November 17</div><h3 class="en">Beach Welcome Party</h3><div class="em">Minitas Beach<br>7:00 PM<br>Elevated Neutrals</div></div>
+      <div class="ec"><div class="edt">Tuesday, November 17</div><h3 class="en">Beach Welcome Party</h3><div class="em">Minitas Beach<br>7:00 PM<a class="em-code" href="#attire-beach">Elevated Neutrals</a></div></div>
       <div class="edv"></div>
-      <div class="ec"><div class="edt">Wednesday, November 18</div><h3 class="en">The Main Event</h3><div class="em">Casa de Campo<br>5:00 PM Ceremony<br>Black Tie</div></div>
+      <div class="ec"><div class="edt">Wednesday, November 18</div><h3 class="en">The Main Event</h3><div class="em">Casa de Campo<br>5:00 PM Ceremony &middot; Reception to Follow<a class="em-code" href="#attire-wedding">Black Tie Elegance</a></div></div>
     </div>
-    <div class="ddv rv"></div>
-    <div class="att-section">
-      <div class="att-main rv">
-        <div class="att-l">Dress Code</div>
-        <div class="att-v">Black Tie Elegance</div>
-        <div class="att-edition">Riviera Edition</div>
-        <p class="att-desc">Our celebration begins at golden hour and continues into the evening. We invite guests to dress in refined black-tie attire, adapted for a warm Caribbean climate. Think timeless elegance, sharp tailoring, and breathable luxury fabrics.</p>
+    <div class="det-cta rv"><p>Two evenings. Two dress codes.</p><a href="#attire">See What to Wear</a></div>
+  </div>
+</section>
+
+<section class="wt" id="attire">
+  <div class="wt-in">
+    <div class="sl rv">What to Wear</div>
+    <h2 class="shd rv d1" style="margin-bottom:24px">Two Evenings. Two Dress Codes.</h2>
+    <p class="wt-lede rv d2">Each event has its own look, and they are not interchangeable. Find your evening below.</p>
+    <div class="gl rv">
+      <a class="gl-c gl-beach" href="#attire-beach">
+        <div class="gl-n">Tuesday, November 17</div>
+        <div class="gl-e">Beach Welcome Party</div>
+        <div class="gl-code"><small>Dress Code</small>Elevated Neutrals</div>
+        <dl>
+          <div class="gl-r"><dt>The Look</dt><dd>Resort chic. Relaxed, but intentional.</dd></div>
+          <div class="gl-r"><dt>Colors</dt><dd>Warm whites, creams, sand, taupe</dd></div>
+          <div class="gl-r"><dt>White &amp; Ivory</dt><dd><strong>Welcome tonight</strong></dd></div>
+          <div class="gl-r"><dt>Shoes</dt><dd>Sand-friendly: flat sandals, espadrilles, wedges</dd></div>
+        </dl>
+        <div class="gl-go">Beach Attire &darr;</div>
+      </a>
+      <a class="gl-c gl-wed" href="#attire-wedding">
+        <div class="gl-n">Wednesday, November 18</div>
+        <div class="gl-e">Ceremony &amp; Reception</div>
+        <div class="gl-code"><small>Dress Code</small>Black Tie Elegance</div>
+        <dl>
+          <div class="gl-r"><dt>The Look</dt><dd>Tuxedos and floor-length gowns</dd></div>
+          <div class="gl-r"><dt>Colors</dt><dd>Dark tailoring. Gowns from champagne to sage.</dd></div>
+          <div class="gl-r"><dt>White &amp; Ivory</dt><dd><strong>Reserved for the bride</strong></dd></div>
+          <div class="gl-r"><dt>Shoes</dt><dd>Formal evening shoes. Make them count.</dd></div>
+        </dl>
+        <div class="gl-go">Wedding Attire &darr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bw" id="attire-beach">
+  <div class="bw-in">
+    <div class="pn-k rv">Tuesday, November 17 &middot; Beach Welcome Party</div>
+    <h3 class="pn-code rv d1">Elevated Neutrals</h3>
+    <div class="pn-w rv d1">Minitas Beach &middot; 7:00 PM</div>
+    <p class="pn-d rv d2">Our sunset welcome party is on the sand at Minitas Beach. We ask guests to wear tonal neutrals &mdash; warm whites, creams, taupes, and sandy tones in soft linens and easy fabrics. Keep it relaxed but intentional.</p>
+    <p class="pn-tag rv d2">Resort chic, not resort casual.</p>
+    <div class="pal-row rv">
+      <div class="pal-item"><div class="pal-swatch" style="background:#F6F1E7"></div><div class="pal-name">Warm White</div></div>
+      <div class="pal-item"><div class="pal-swatch" style="background:#EBDFC9"></div><div class="pal-name">Cream</div></div>
+      <div class="pal-item"><div class="pal-swatch" style="background:#D9C6A5"></div><div class="pal-name">Sand</div></div>
+      <div class="pal-item"><div class="pal-swatch" style="background:#B3A08A"></div><div class="pal-name">Taupe</div></div>
+    </div>
+    <div class="cg rv">
+      <div class="cg-c"><h4>Women</h4><p>Flowing maxis, midis, or matching sets</p><p>Linen, cotton, gauze, or silk</p><p>Woven bags, gold jewelry, natural textures</p></div>
+      <div class="cg-c"><h4>Men</h4><p>Linen or cotton shirts</p><p>Tailored trousers in cream, sand, or taupe</p><p>No jacket or tie required</p></div>
+      <div class="cg-c"><h4>On the Sand</h4><p>Flat sandals, espadrilles, or wedges</p><p>Save the stilettos for Wednesday</p><p>Bring a light layer for the evening breeze</p></div>
+    </div>
+    <p class="pn-avoid rv"><b>Please Avoid</b>Swimwear, cover-ups, athletic wear, bright colors, and bold prints.</p>
+    <p class="pn-x rv">White and cream are welcome on the beach. The next evening, they are <a href="#attire-wedding">reserved for the bride</a>.</p>
+  </div>
+</section>
+
+<section class="wd" id="attire-wedding">
+  <div class="wd-in">
+    <div class="pn-k rv">Wednesday, November 18 &middot; Ceremony &amp; Reception</div>
+    <h3 class="pn-code rv d1">Black Tie Elegance</h3>
+    <div class="pn-w rv d1">Casa de Campo &middot; 5:00 PM Ceremony</div>
+    <p class="pn-d rv d2">Our celebration begins at golden hour and continues into the evening. This is a black-tie event: tuxedos and dark formal suits, floor-length gowns and equally formal evening looks, in breathable luxury fabrics suited to a warm Caribbean night.</p>
+    <p class="pn-tag rv d2">One dress code, from the ceremony through the reception.</p>
+    <div class="wr rv">
+      <div class="wr-l">One Request</div>
+      <h4 class="wr-h">White and ivory are reserved for the bride.</h4>
+      <p>Ladies, <strong>please do not wear a white or ivory dress</strong> to the ceremony or the reception. If it could be mistaken for bridal in a photograph, choose another shade. Champagne, soft gold, and every deeper tone in the palette are yours.</p>
+    </div>
+    <div class="lb rv">
+      <div class="lb-tabs" role="tablist" aria-label="Wedding lookbooks">
+        <button class="lb-tab" role="tab" id="lbt-w" aria-controls="lb-w" aria-selected="true">Women&rsquo;s Lookbook</button>
+        <button class="lb-tab" role="tab" id="lbt-m" aria-controls="lb-m" aria-selected="false">Men&rsquo;s Lookbook</button>
       </div>
-      <div class="rv">
-        <div class="att-l" style="text-align:center;margin-bottom:24px">Our Color Palette</div>
-        <div class="pal-row">
-          <div class="pal-item"><div class="pal-swatch" style="background:#ECE4D3"></div><div class="pal-name">Ivory</div></div>
-          <div class="pal-item"><div class="pal-swatch" style="background:#D8C9AE"></div><div class="pal-name">Champagne</div></div>
-          <div class="pal-item"><div class="pal-swatch" style="background:#8C9A76"></div><div class="pal-name">Sage</div></div>
-          <div class="pal-item"><div class="pal-swatch" style="background:#BDC79E"></div><div class="pal-name">Pistachio</div></div>
-          <div class="pal-item"><div class="pal-swatch" style="background:linear-gradient(135deg,#D9B14E 0%,#C19A36 45%,#9C7A24 100%)"></div><div class="pal-name">Gold Leaf</div></div>
-          <div class="pal-item"><div class="pal-swatch" style="background:#1F1E1B"></div><div class="pal-name">Onyx</div></div>
+      <div class="lb-p" id="lb-w" role="tabpanel" aria-labelledby="lbt-w">
+        <div class="lb-k">Black Tie Elegance &middot; Attire Direction</div>
+        <h4 class="lb-t">Women&rsquo;s Lookbook</h4>
+        <p class="lb-s">Sculptural gowns, soft palette, formal shoes, expressive accessories.</p>
+        <div class="lb-g">
+          <dl class="lb-rows">
+            <div class="lb-r"><dt>Silhouettes</dt><dd>Floor-length gowns, elevated midis, formal jumpsuits, and dressy separates with sculptural lines.</dd></div>
+            <div class="lb-r"><dt>Ideal Fabrics</dt><dd>Silk satin, chiffon, georgette, crepe, charmeuse, and other lightweight evening fabrics.</dd></div>
+            <div class="lb-r"><dt>Palette</dt><dd>Champagne, soft gold, taupe, blush, dusty rose, mauve, muted sage, pistachio, olive, and onyx accents.</dd></div>
+            <div class="lb-r"><dt>Shoe Direction</dt><dd>Sculptural heels, metallic sandals, satin pumps, elegant block heels, and formal flats.</dd></div>
+            <div class="lb-r"><dt>Accessories</dt><dd>Jewelry, clutches, and expressive details are encouraged.</dd></div>
+          </dl>
+          <div class="lb-img"><img src="images/12_lookbook_women.jpg" alt="Women&rsquo;s inspiration: draped floor-length gowns in champagne, soft gold, taupe, blush, mauve, and sage, with gold jewelry, a gold clutch, and formal heels" loading="lazy" width="583" height="439"></div>
         </div>
+        <div class="lb-sw" aria-label="Women&rsquo;s palette">
+          <div><i style="background:#E4D2B6"></i>Champagne</div>
+          <div><i style="background:#D4BC99"></i>Soft Gold</div>
+          <div><i style="background:#A88B6E"></i>Taupe</div>
+          <div><i style="background:#D9B2A3"></i>Blush</div>
+          <div><i style="background:#C39687"></i>Dusty Rose</div>
+          <div><i style="background:#A88280"></i>Mauve</div>
+          <div><i style="background:#80816A"></i>Muted Sage</div>
+          <div><i style="background:#B6AD8E"></i>Pistachio</div>
+          <div><i style="background:#161514"></i>Onyx</div>
+        </div>
+        <p class="lb-note"><b>Note</b>Individuality is encouraged through silhouette, texture, jewelry, and shoes. <strong>No white or ivory dresses, please.</strong> Kindly also avoid linen, beachwear, loud tropical prints, and casual sandals.</p>
       </div>
-      <div class="att-grid rv">
-        <div class="att-col"><h4>Men</h4><div class="att-item att-encouraged">Black, Midnight Navy, or Deep Charcoal suit</div><div class="att-item att-encouraged">Champagne, sage, or gold-leaf pocket square</div><div class="att-item att-encouraged">Black patent or calfskin oxfords</div><div class="att-item" style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)"><div class="att-avoid">No linen, tan/beige suits, sandals, or brown shoes</div></div></div>
-        <div class="att-col"><h4>Women</h4><div class="att-item att-encouraged">Ivory, champagne, sage, pistachio, or soft gold</div><div class="att-item att-encouraged">Floor-length gowns or elevated midis</div><div class="att-item att-encouraged">Silk, satin, chiffon, organza, crepe</div><div class="att-item" style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06)"><div class="att-avoid">No linen, loud prints, stark white, or casual resort wear</div></div></div>
-      </div>
-      <div class="att-note rv">We kindly ask guests to dress in alignment with our curated color palette for a cohesive, elevated aesthetic. Dark, formal looks photograph beautifully while remaining comfortable in the evening warmth.</div>
-      <div class="att-shoe rv"><h4>Best Shoes of the Night</h4><p>One award for women. One for men. <em>Craftsmanship, creativity, and confidence encouraged.</em></p></div>
-      <div style="margin-top:64px;padding-top:48px;border-top:1px solid rgba(255,255,255,.06);text-align:center" class="rv">
-        <div class="att-l">Beach Welcome Party — November 17</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:#fff;margin:8px 0 16px">Elevated Neutrals</div>
-        <p style="font-family:'Outfit',sans-serif;font-size:13px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.7;max-width:460px;margin:0 auto">For our sunset welcome party on the beach, we ask guests to wear tonal neutrals — warm whites, creams, taupes, soft linens, and sandy tones. Keep it relaxed but intentional. Think resort chic, not resort casual.</p>
+      <div class="lb-p" id="lb-m" role="tabpanel" aria-labelledby="lbt-m">
+        <div class="lb-k">Black Tie Elegance &middot; Attire Direction</div>
+        <h4 class="lb-t">Men&rsquo;s Lookbook</h4>
+        <p class="lb-s">Dark tailoring, breathable formal fabrics, polished footwear, restrained accessories.</p>
+        <div class="lb-g">
+          <dl class="lb-rows">
+            <div class="lb-r"><dt>Silhouettes</dt><dd>Black or midnight navy tuxedos, deep charcoal formal suits, dinner jackets, and sharply tailored evening separates.</dd></div>
+            <div class="lb-r"><dt>Ideal Fabrics</dt><dd>Tropical wool, high-twist wool, wool-silk blends, lightweight mohair blends, and other breathable formal fabrics.</dd></div>
+            <div class="lb-r"><dt>Color Direction</dt><dd>Black, midnight navy, or deep charcoal with a crisp white dress shirt, and subtle accents of champagne or muted sage.</dd></div>
+            <div class="lb-r"><dt>Shoe Direction</dt><dd>Patent oxfords, polished loafers, velvet slippers, sleek monk straps, and other formal evening shoes.</dd></div>
+            <div class="lb-r"><dt>Accessories</dt><dd>Black bow ties, pocket squares, cufflinks, dress watches, and restrained finishing details are encouraged.</dd></div>
+          </dl>
+          <div class="lb-img"><img src="images/13_lookbook_men.jpg" alt="Men&rsquo;s inspiration: black, midnight navy, and charcoal tuxedos with bow ties, patent oxfords, cufflinks, dress watches, and champagne and sage pocket squares" loading="lazy" width="610" height="432"></div>
+        </div>
+        <div class="lb-sw" aria-label="Men&rsquo;s palette">
+          <div><i style="background:#10100E"></i>Black</div>
+          <div><i style="background:#1E2331"></i>Midnight Navy</div>
+          <div><i style="background:#393938"></i>Deep Charcoal</div>
+          <div><i style="background:#D4BEA2"></i>Champagne</div>
+          <div><i style="background:#8A8873"></i>Muted Sage</div>
+        </div>
+        <p class="lb-note"><b>Note</b>Individuality is encouraged through tailoring, texture, accessories, and shoes. Kindly avoid linen suits, tan or beige suits, resort-casual looks, sneakers, brown shoes, and casual sandals.</p>
       </div>
     </div>
+    <div class="att-note rv">We kindly ask guests to dress in alignment with our curated color palette for a cohesive, elevated aesthetic. Dark, formal looks photograph beautifully while remaining comfortable in the evening warmth.</div>
+    <div class="att-shoe rv"><h4>Best Shoes of the Night</h4><p>One award for women. One for men. <em>Shoe expression encouraged &mdash; keep it formal.</em></p></div>
   </div>
 </section>
 
@@ -304,7 +501,7 @@ img{max-width:100%;display:block}
 <footer class="ft">
   <div class="ft-n">Caitlin &amp; Robert</div>
   <div class="ft-d">November 18, 2026 &middot; Casa de Campo, La Romana</div>
-  <div class="ft-l"><a href="#details">Details</a><a href="#travel">Travel</a><a href="#story">Our Story</a><a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener">Reserve Your Room</a><a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener">RSVP</a><a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener">Registry</a></div>
+  <div class="ft-l"><a href="#details">Details</a><a href="#attire">Attire</a><a href="#travel">Travel</a><a href="#story">Our Story</a><a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener">Reserve Your Room</a><a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener">RSVP</a><a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener">Registry</a></div>
   <div class="ft-p"><div class="ft-pl">Wedding &amp; Travel Planner</div><div class="ft-pi"><a href="mailto:hello@aishathomas.com">hello@aishathomas.com</a> &middot; <a href="tel:+17049650523">(704) 965-0523</a></div></div>
 </footer>
 <script>
@@ -316,6 +513,10 @@ function cm(){document.getElementById('mm').classList.remove('open')}
 var rvs=document.querySelectorAll('.rv');
 var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 rvs.forEach(function(el){ob.observe(el)});
+var lbt=[].slice.call(document.querySelectorAll('.lb-tab'));
+function lbs(t){lbt.forEach(function(b){var on=b===t;b.setAttribute('aria-selected',on?'true':'false');b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on})}
+lbt.forEach(function(b,i){b.addEventListener('click',function(){lbs(b)});b.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var o=lbt[(i+1)%lbt.length];lbs(o);o.focus()}})});
+if(lbt.length)lbs(lbt[0]);
 </script>
 </body>
 </html>
