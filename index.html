@@ -130,7 +130,10 @@ img{max-width:100%;display:block}
 .rsvp-c{position:relative;z-index:2;text-align:center;max-width:560px}
 .rsvp-o{width:32px;height:1px;background:var(--gold);margin:0 auto 40px}
 .rsvp-h{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,6vw,56px);font-weight:300;font-style:italic;color:#fff;margin-bottom:16px;line-height:1.15}
-.rsvp-s{font-family:'Outfit',sans-serif;font-size:16px;font-weight:400;color:rgba(255,255,255,.8);margin-bottom:64px;line-height:1.7}
+.rsvp-s{font-family:'Outfit',sans-serif;font-size:16px;font-weight:400;color:rgba(255,255,255,.8);margin-bottom:40px;line-height:1.7}
+.gift{font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;color:rgba(255,255,255,.8);line-height:1.5}
+.gift a{color:var(--gold-light);text-decoration:none;border-bottom:1px solid rgba(212,196,138,.45);padding-bottom:1px;transition:color .3s,border-color .3s;white-space:nowrap}
+.gift a:hover{color:#fff;border-color:#fff}
 .rsvp-btn{display:inline-block;font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--onyx);background:var(--gold);padding:20px 64px;text-decoration:none;transition:all .4s;border:1px solid var(--gold)}
 .rsvp-btn:hover{background:#fff;color:var(--onyx);border-color:#fff;transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,178,107,.3)}
 .ft{background:var(--onyx);padding:64px 24px;text-align:center}
@@ -258,7 +261,7 @@ img{max-width:100%;display:block}
 </div>
 <nav class="nav" id="nav">
   <a href="#" class="nav-logo">The Art of Relief</a>
-  <ul class="nav-links"><li><a href="#details">Details</a></li><li><a href="#attire">Attire</a></li><li><a href="#travel">Travel</a></li><li><a href="#story">Our Story</a></li><li><a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener">RSVP</a></li><li><a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener">Registry</a></li><li><a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" class="nav-rsvp">Reserve</a></li></ul>
+  <ul class="nav-links"><li><a href="#details">Details</a></li><li><a href="#attire">Attire</a></li><li><a href="#travel">Travel</a></li><li><a href="#story">Our Story</a></li></ul>
   <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mm" id="mm"><button class="mc" id="mc">&times;</button>
@@ -267,19 +270,13 @@ img{max-width:100%;display:block}
 <a href="#attire" onclick="cm()">Attire</a>
 <a href="#travel" onclick="cm()">Travel</a>
 <a href="#story" onclick="cm()">Our Story</a>
-<a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" onclick="cm()">Reserve Your Room</a>
-<a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener" onclick="cm()">RSVP</a>
-<a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener" onclick="cm()">Registry</a></div>
+</div>
 
 <section class="hero">
   <div class="hero-img"><img src="images/01_hero.jpg" alt="Caitlin and Robert"><div class="hero-ov"></div></div>
   <div class="hero-c">
     <h1 class="hero-n">Caitlin <span class="hero-a">&amp;</span> Robert</h1>
-    <p class="hero-d">November 18, 2026 <span class="hero-dv"></span> Casa de Campo</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;opacity:0;transform:translateY(16px);animation:fu 1s cubic-bezier(.22,1,.36,1) 1s forwards">
-      <a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" style="font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#1F1E1B;background:#C9B26B;padding:16px 40px;text-decoration:none;border:1px solid #C9B26B;transition:all .4s">Reserve Your Room</a>
-      <a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener" style="font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#fff;background:transparent;padding:16px 40px;text-decoration:none;border:1px solid rgba(255,255,255,.4);transition:all .4s">RSVP</a>
-    </div>
+    <p class="hero-d" style="margin-bottom:0">November 18, 2026 <span class="hero-dv"></span> Casa de Campo</p>
   </div>
   <div class="hero-sc"><div class="hero-sl"></div></div>
 </section>
@@ -311,14 +308,14 @@ img{max-width:100%;display:block}
   <div class="wt-in">
     <div class="sl rv">What to Wear</div>
     <h2 class="shd rv d1" style="margin-bottom:24px">Two Evenings. Two Dress Codes.</h2>
-    <p class="wt-lede rv d2">Each event has its own look, and they are not interchangeable. Find your evening below.</p>
+    <p class="wt-lede rv d2">Wednesday is dressed up. Tuesday is easy. Find your evening below.</p>
     <div class="gl rv">
       <a class="gl-c gl-beach" href="#attire-beach">
         <div class="gl-n">Tuesday, November 17</div>
         <div class="gl-e">Beach Welcome Party</div>
         <div class="gl-code"><small>Dress Code</small>Elevated Neutrals</div>
         <dl>
-          <div class="gl-r"><dt>The Look</dt><dd>Resort chic. Relaxed, but intentional.</dd></div>
+          <div class="gl-r"><dt>The Look</dt><dd>Look good. Be comfortable. That&rsquo;s it.</dd></div>
           <div class="gl-r"><dt>Colors</dt><dd>Warm whites, creams, sand, taupe</dd></div>
           <div class="gl-r"><dt>White &amp; Ivory</dt><dd><strong>Welcome tonight, for everyone</strong></dd></div>
           <div class="gl-r"><dt>Shoes</dt><dd>Sand-friendly: flat sandals, espadrilles, wedges</dd></div>
@@ -346,8 +343,8 @@ img{max-width:100%;display:block}
     <div class="pn-k rv">Tuesday, November 17 &middot; Beach Welcome Party</div>
     <h3 class="pn-code rv d1">Elevated Neutrals</h3>
     <div class="pn-w rv d1">Minitas Beach &middot; 7:00 PM</div>
-    <p class="pn-d rv d2">Our sunset welcome party is on the sand at Minitas Beach. We ask guests to wear tonal neutrals &mdash; warm whites, creams, taupes, and sandy tones in soft linens and easy fabrics. Keep it relaxed but intentional.</p>
-    <p class="pn-tag rv d2">Resort chic, not resort casual.</p>
+    <p class="pn-d rv d2">Our sunset welcome party is on the sand at Minitas Beach. Don&rsquo;t overthink it &mdash; wear what makes you feel good and lets you kick back. Just keep it in soft, sandy neutrals.</p>
+    <p class="pn-tag rv d2">Look good. Be comfortable.</p>
     <div class="pal-row rv">
       <div class="pal-item"><div class="pal-swatch" style="background:#F6F1E7"></div><div class="pal-name">Warm White</div></div>
       <div class="pal-item"><div class="pal-swatch" style="background:#EBDFC9"></div><div class="pal-name">Cream</div></div>
@@ -359,7 +356,7 @@ img{max-width:100%;display:block}
       <div class="cg-c"><h4>Men</h4><p>Linen or cotton shirts</p><p>Tailored trousers in cream, sand, or taupe</p><p>No jacket or tie required</p></div>
       <div class="cg-c"><h4>On the Sand</h4><p>Flat sandals, espadrilles, or wedges</p><p>Save the stilettos for Wednesday</p><p>Bring a light layer for the evening breeze</p></div>
     </div>
-    <p class="pn-avoid rv"><b>Please Avoid</b>Swimwear, cover-ups, athletic wear, bright colors, and bold prints.</p>
+    <p class="pn-avoid rv"><b>The Only Ask</b>Leave the swimwear, athletic wear, and loud colors at the hotel.</p>
     <p class="pn-x rv">Everyone is welcome to wear white on the beach. The next evening, white and ivory are <a href="#attire-wedding">reserved for the bride</a>.</p>
   </div>
 </section>
@@ -455,7 +452,7 @@ img{max-width:100%;display:block}
       <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--onyx);margin-bottom:16px">While You're There</div>
       <p style="font-family:'Outfit',sans-serif;font-size:16px;font-weight:400;color:var(--stone);line-height:1.85">Casa de Campo is a 7,000-acre resort with three championship golf courses, a private beach, a full-service marina, an equestrian center, skeet shooting and a replica 16th-century Mediterranean village called Altos de Chavón. There's also a spa, water sports, deep-sea fishing, and more restaurants than you'll have time for. Come early. Stay late. Make it a vacation.</p>
     </div>
-    <div class="accb rv"><h3>Accommodations</h3><p>Our room block at Casa de Campo is now closed. If you still need a room, reach out to our planner, Aisha Thomas, at hello@aishathomas.com or (704) 965-0523 and she&#x27;ll help with availability.</p><a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" class="bg">Reserve Your Room</a></div>
+    <div class="accb rv"><h3>Accommodations</h3><p>Our room block at Casa de Campo is now closed. If you still need a room, reach out to our planner, Aisha Thomas, at hello@aishathomas.com or (704) 965-0523 and she&#x27;ll help with availability.</p></div>
   </div>
 </section>
 
@@ -489,19 +486,16 @@ img{max-width:100%;display:block}
   <div class="rsvp-bg"><img src="images/09_rsvp.jpg" alt="Caitlin and Robert"><div class="rsvp-ov"></div></div>
   <div class="rsvp-c">
     <div class="rsvp-o rv"></div>
-    <h2 class="rsvp-h rv d1">Will you join us?</h2>
-    <p class="rsvp-s rv d2">If you haven't RSVPed yet, please do so as soon as possible — we're finalizing our headcount. Still need a room? Our block is closed, but Aisha can help: hello@aishathomas.com.</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap" class="rv d3">
-      <a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" class="rsvp-btn">Reserve Your Room</a>
-      <a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener" style="display:inline-block;font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:#fff;background:transparent;padding:20px 48px;text-decoration:none;border:1px solid rgba(255,255,255,.4);transition:all .4s">RSVP</a>
-    </div>
+    <h2 class="rsvp-h rv d1">See you in La Romana.</h2>
+    <p class="rsvp-s rv d2">Having you there, sand in your shoes and glass in hand, is everything we could ask for. Truly.</p>
+    <p class="gift rv d3">If you&rsquo;d still like to mark the occasion, <a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener">our registry lives here</a>.</p>
   </div>
 </section>
 
 <footer class="ft">
   <div class="ft-n">Caitlin &amp; Robert</div>
   <div class="ft-d">November 18, 2026 &middot; Casa de Campo, La Romana</div>
-  <div class="ft-l"><a href="#details">Details</a><a href="#attire">Attire</a><a href="#travel">Travel</a><a href="#story">Our Story</a><a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener">Reserve Your Room</a><a href="https://www.zola.com/wedding/theartofrelief/rsvp" target="_blank" rel="noopener">RSVP</a><a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener">Registry</a></div>
+  <div class="ft-l"><a href="#details">Details</a><a href="#attire">Attire</a><a href="#travel">Travel</a><a href="#story">Our Story</a><a href="https://www.zola.com/wedding/theartofrelief/registry" target="_blank" rel="noopener">Registry</a></div>
   <div class="ft-p"><div class="ft-pl">Wedding &amp; Travel Planner</div><div class="ft-pi"><a href="mailto:hello@aishathomas.com">hello@aishathomas.com</a> &middot; <a href="tel:+17049650523">(704) 965-0523</a></div></div>
 </footer>
 <script>
