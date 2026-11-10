@@ -253,13 +253,16 @@ img{max-width:100%;display:block}
 .lb-note strong{font-weight:600;font-style:normal;color:var(--onyx)}
 @media(max-width:760px){.lb-p{padding:40px 20px 36px}.lb-g{gap:24px;margin:32px 0}.lb-rows{columns:1}.lb-sw div{width:68px}.lb-tab{letter-spacing:2px;font-size:12px;padding:17px 6px 18px}}
 .wd .att-note{margin-top:56px;color:rgba(255,255,255,.78)}
+.tb-mob{display:none}
+@media(max-width:600px){.tb-hide{display:none!important}.tb-mob{display:inline}}
+@media(max-width:380px){a[href="#attire"][style*="underline"]{letter-spacing:1.2px!important;font-size:12px!important}}
 </style>
 </head>
 <body>
 <div style="background:#1F1E1B;padding:10px 24px;text-align:center;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;z-index:101;position:relative">
-  <span style="font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#C9B26B">Attire Guide Updated</span>
-  <span style="color:rgba(255,255,255,.15);font-size:13px">&middot;</span>
-  <a href="#attire" style="font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.7);text-decoration:underline;text-underline-offset:3px">See What to Wear</a>
+  <span class="tb-hide" style="font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:#C9B26B">Attire Guide Updated</span>
+  <span class="tb-hide" style="color:rgba(255,255,255,.15);font-size:13px">&middot;</span>
+  <a href="#attire" style="font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.7);text-decoration:underline;text-underline-offset:3px"><span class="tb-mob">Attire Updated: </span>See What to Wear</a>
 </div>
 <nav class="nav" id="nav">
   <a href="#" class="nav-logo">The Art of Relief</a>
@@ -278,7 +281,8 @@ img{max-width:100%;display:block}
   <div class="hero-img"><img src="images/01_hero.jpg" alt="Caitlin and Robert"><div class="hero-ov"></div></div>
   <div class="hero-c">
     <h1 class="hero-n">Caitlin <span class="hero-a">&amp;</span> Robert</h1>
-    <p class="hero-d" style="margin-bottom:0">November 18, 2026 <span class="hero-dv"></span> Casa de Campo</p>
+    <p class="hero-d" style="margin-bottom:48px">November 18, 2026 <span class="hero-dv"></span> Casa de Campo</p>
+    <a href="https://traveljoy.com/bookings/tCUFfHruJ1WdQCEqVrQL6pGK" target="_blank" rel="noopener" class="hero-btn">Reserve Your Room</a>
   </div>
   <div class="hero-sc"><div class="hero-sl"></div></div>
 </section>
