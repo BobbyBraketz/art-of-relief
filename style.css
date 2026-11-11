@@ -410,3 +410,14 @@ body.sub .wk{padding-top:160px}
 .dir-sub .dir-d{font-size:14px}
 @media(max-width:1000px){.dir-sub .dir-g{grid-template-columns:repeat(2,1fr)}.dir-sub .dir-c:last-child{grid-column:1/-1}}
 @media(max-width:560px){.dir-sub .dir-g{grid-template-columns:1fr}.dir-sub .dir-c{min-height:0;padding:22px}.dir-sub .dir-t{font-size:24px}}
+/* Attire: event name leads */
+.pn-ev{text-align:center;margin-bottom:28px}
+.pn-ev small{display:block;font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:3.5px;text-transform:uppercase}
+.pn-ev b{display:block;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(42px,7.5vw,76px);line-height:1.05;margin-top:12px}
+.pn-ev span{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.6vw,26px);margin-top:8px}
+.pn-ev::after{content:'';display:block;width:64px;height:1px;background:var(--gold);margin:28px auto 0}
+.bw .pn-ev small{color:var(--gold-deep)}.bw .pn-ev b{color:var(--onyx)}.bw .pn-ev span{color:var(--stone)}
+.wd .pn-ev small{color:var(--gold)}.wd .pn-ev b{color:#fff}.wd .pn-ev span{color:rgba(255,255,255,.7)}
+.pn-dc{font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:6px}
+.bw .pn-dc{color:var(--stone)}.wd .pn-dc{color:rgba(255,255,255,.6)}
+.bw .pn-code,.wd .pn-code{font-size:clamp(30px,4.6vw,46px)}
