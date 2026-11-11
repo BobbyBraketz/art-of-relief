@@ -258,71 +258,99 @@ img{max-width:100%;display:block}
 @media(max-width:380px){a[href="#attire"][style*="underline"]{letter-spacing:1.2px!important;font-size:12px!important}}
 /* ===== Wedding Week ===== */
 .wk{background:var(--ivory-warm);padding:128px 24px 112px;position:relative}
-.wk-in{max-width:860px;margin:0 auto}
-.wk-lede{font-family:'Outfit',sans-serif;font-size:17px;line-height:1.85;color:var(--stone);text-align:center;max-width:560px;margin:0 auto 48px}
-.wk-bar{display:flex;flex-direction:column;align-items:center;gap:20px;margin-bottom:40px}
+.wk-in{max-width:880px;margin:0 auto}
+.wk-lede{font-family:'Outfit',sans-serif;font-size:17px;line-height:1.85;color:var(--stone);text-align:center;max-width:560px;margin:0 auto 40px}
+.wk-bar{display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:56px}
 .wk-sw{display:inline-flex;align-items:center;gap:14px;background:var(--ivory);border:1px solid var(--taupe);padding:14px 24px 14px 16px;cursor:pointer;font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--onyx);transition:border-color .3s,background .3s;min-height:48px}
 .wk-sw:hover{border-color:var(--gold)}
-.wk-sw:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
+.wk-sw:focus-visible,.wk a:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
 .wk-sw-t{width:40px;height:22px;border-radius:11px;background:var(--taupe);position:relative;transition:background .3s;flex:none}
 .wk-sw-k{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(31,30,27,.25);transition:transform .3s cubic-bezier(.22,1,.36,1)}
 .wk-sw[aria-checked="true"]{background:var(--onyx);border-color:var(--onyx);color:var(--ivory)}
 .wk-sw[aria-checked="true"] .wk-sw-t{background:var(--gold)}
 .wk-sw[aria-checked="true"] .wk-sw-k{transform:translateX(18px)}
 .wk-hint{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--stone);text-align:center}
-.wk-key{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.wk-eye{font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold-deep);text-align:center;margin-bottom:8px}
+.wk-h3{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.4vw,34px);font-weight:400;color:var(--onyx);text-align:center;line-height:1.2;margin-bottom:8px}
+.wk-sub{font-family:'Outfit',sans-serif;font-size:15px;color:var(--stone);text-align:center;margin-bottom:28px}
+/* Must-attend */
+.wk-must{margin-bottom:72px}
+.wk-mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.wk-mc{display:flex;flex-direction:column;gap:6px;background:#fff;border-top:3px solid var(--gold);padding:24px 22px 22px;text-decoration:none;box-shadow:0 1px 2px rgba(31,30,27,.05),0 12px 32px -16px rgba(31,30,27,.18);transition:transform .3s,box-shadow .3s}
+.wk-mc:hover{transform:translateY(-2px);box-shadow:0 1px 2px rgba(31,30,27,.05),0 18px 40px -16px rgba(31,30,27,.24)}
+.wk-mc-d{font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-deep)}
+.wk-mc-n{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--onyx);line-height:1.15}
+.wk-mc-s{font-family:'Outfit',sans-serif;font-size:14px;color:var(--stone);line-height:1.6}
+.wk-mc.wk-mc-p{border-top-color:var(--onyx);display:none}
+.wk.is-party .wk-mc.wk-mc-p{display:flex}
+/* Perks */
+.wk-perks{background:var(--ivory);border:1px solid rgba(31,30,27,.08);padding:48px 40px 40px;margin-bottom:72px;scroll-margin-top:90px}
+.wk-pg{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(31,30,27,.08);border:1px solid rgba(31,30,27,.08);margin-bottom:24px}
+.wk-pg li{background:var(--ivory);padding:20px 18px;display:flex;flex-direction:column;gap:4px}
+.wk-pg b{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;color:var(--onyx);line-height:1.2}
+.wk-pg span{font-family:'Outfit',sans-serif;font-size:13px;color:var(--stone);line-height:1.5}
+.wk-pg em{font-style:normal;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold-deep)}
+.wk-pn{font-family:'Outfit',sans-serif;font-size:14px;color:var(--stone);text-align:center;font-style:italic}
+/* Day row */
+.wk-days{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:12px 0;margin-bottom:24px;border-bottom:1px solid rgba(31,30,27,.08)}
+.wk-days::-webkit-scrollbar{display:none}
+.wk-days a{flex:1 0 auto;min-width:72px;text-align:center;text-decoration:none;padding:8px 10px 14px;border:1px solid transparent;transition:border-color .3s;position:relative}
+.wk-days a:hover{border-color:var(--gold)}
+.wk-days b{display:block;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--stone)}
+.wk-days i{display:block;font-family:'Cormorant Garamond',serif;font-style:normal;font-size:24px;color:var(--onyx);line-height:1.2}
+.wk-days a.is-today{border-color:var(--onyx)}
+.wk-days a.has-host::after,.wk.is-party .wk-days a.has-party::after{content:'';position:absolute;left:50%;bottom:5px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--gold)}
+.wk-days a.has-host i{color:var(--gold-deep)}
+/* Timeline */
+.wk-list{list-style:none}
+.wkd{display:grid;grid-template-columns:140px 1fr;gap:32px;padding:40px 0;border-bottom:1px solid rgba(31,30,27,.1);scroll-margin-top:90px}
+.wkd-dw{display:block;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep)}
+.wkd-dt{display:block;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:var(--onyx);line-height:1.1}
+.wkd-mood{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--stone);margin-top:6px}
+.wkd .wkd-today{display:none;margin-top:10px}
+.wkd.is-today .wkd-today{display:inline-block}
+.wki-l{list-style:none;display:flex;flex-direction:column;gap:22px}
+.wki{display:grid;grid-template-columns:110px 1fr;gap:20px}
+.wki-t{font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;letter-spacing:1px;color:var(--mist);padding-top:3px;font-variant-numeric:tabular-nums}
+.wki-t small{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);font-weight:400}
+.wki-b h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;color:var(--charcoal);line-height:1.25;margin-bottom:2px}
+.wki-b p{font-family:'Outfit',sans-serif;font-size:14px;line-height:1.7;color:var(--stone);margin-bottom:8px}
+.wki-b a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.wki-b a:hover{color:var(--onyx)}
+.wki-tags{display:flex;flex-wrap:wrap;gap:8px}
 .wkt{display:inline-block;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;padding:5px 10px;line-height:1.3;white-space:nowrap}
 .wkt-h{background:var(--gold);color:var(--onyx)}
 .wkt-p{background:var(--onyx);color:var(--ivory)}
 .wkt-o{border:1px solid var(--taupe);color:var(--stone);padding:4px 9px}
-.wk-days{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:12px 0;margin-bottom:24px;border-bottom:1px solid rgba(31,30,27,.08)}
-.wk-days::-webkit-scrollbar{display:none}
-.wk-days a{flex:1 0 auto;min-width:72px;text-align:center;text-decoration:none;padding:8px 10px;border:1px solid transparent;transition:border-color .3s}
-.wk-days a:hover,.wk-days a:focus-visible{border-color:var(--gold)}
-.wk-days b{display:block;font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--stone)}
-.wk-days i{display:block;font-family:'Cormorant Garamond',serif;font-style:normal;font-size:24px;color:var(--onyx);line-height:1.2}
-.wk-days a.is-today{border-color:var(--onyx)}
-.wk-days a.is-big i{color:var(--gold-deep)}
-.wk-list{list-style:none}
-.wkd{display:grid;grid-template-columns:140px 1fr;gap:32px;padding:40px 0;border-bottom:1px solid rgba(31,30,27,.1);scroll-margin-top:90px}
-.wkd-h{padding-top:2px}
-.wkd-dw{display:block;font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold-deep)}
-.wkd-dt{display:block;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:400;color:var(--onyx);line-height:1.1}
-.wkd-mood{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--stone);margin-top:6px}
-.wkd-today{display:none;margin-top:10px}
-.wkd.is-today .wkd-today{display:inline-block}
-.wki-l{list-style:none;display:flex;flex-direction:column;gap:28px}
-.wki{display:grid;grid-template-columns:118px 1fr;gap:20px}
-.wki-t{font-family:'Outfit',sans-serif;font-size:14px;font-weight:500;letter-spacing:1px;color:var(--onyx);padding-top:5px;font-variant-numeric:tabular-nums}
-.wki-t small{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mist);font-weight:400}
-.wki-b h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--onyx);line-height:1.2;margin-bottom:4px}
-.wki-b p{font-family:'Outfit',sans-serif;font-size:15px;line-height:1.7;color:var(--stone);margin-bottom:10px}
-.wki-b a{color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
-.wki-b a:hover{color:var(--onyx)}
-.wki-tags{display:flex;flex-wrap:wrap;gap:8px}
-.wki-sub{list-style:none;margin:6px 0 12px;border-left:1px solid var(--gold);padding-left:16px}
-.wki-sub li{font-family:'Outfit',sans-serif;font-size:14px;line-height:1.9;color:var(--charcoal)}
-.wki-sub b{font-weight:500;display:inline-block;min-width:118px;font-variant-numeric:tabular-nums}
-.wki-acts{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 12px}
-.wki-acts span{font-family:'Outfit',sans-serif;font-size:13px;color:var(--charcoal);border:1px solid var(--taupe);background:var(--ivory);padding:6px 12px}
-.wki-feat .wki-b h3{font-size:30px}
-.wki-p{display:none;position:relative}
-.wki-p::before{content:'';position:absolute;left:-20px;top:4px;bottom:4px;width:2px;background:var(--gold)}
+/* Free time row */
+.wki-free .wki-b h3{font-style:italic;font-weight:400;color:var(--stone)}
+/* Hosted = raised card */
+.wki-host{background:#fff;border-top:3px solid var(--gold);padding:26px 28px;box-shadow:0 1px 2px rgba(31,30,27,.05),0 14px 36px -18px rgba(31,30,27,.2);grid-template-columns:96px 1fr}
+.wki-host .wki-t{color:var(--onyx);font-size:15px;padding-top:6px}
+.wki-host .wki-b h3{font-size:30px;font-weight:400;color:var(--onyx);margin-bottom:6px}
+.wki-host .wki-b p{font-size:15px;color:var(--charcoal)}
+.wki-host .wkt-h{margin-top:4px}
+.wki-p.wki-host{border-top-color:var(--onyx)}
+.wki-sub{list-style:none;margin:6px 0 14px;border-left:1px solid var(--gold);padding-left:16px}
+.wki-sub li{font-family:'Outfit',sans-serif;font-size:14px;line-height:1.5;color:var(--charcoal);display:grid;grid-template-columns:118px 1fr;gap:12px;padding:5px 0}
+.wki-sub b{font-weight:500;font-variant-numeric:tabular-nums}
+.wki-p{display:none}
 .wk.is-party .wki-p{display:grid}
-.wk.is-party .wki-g{display:none}
 .wk-note{font-family:'Outfit',sans-serif;font-size:14px;line-height:1.8;color:var(--stone);text-align:center;max-width:560px;margin:48px auto 0;font-style:italic}
+@media(max-width:800px){.wk-pg{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){
 .wk{padding:96px 20px 80px}
+.wk-perks{padding:36px 20px 28px;margin-left:-4px;margin-right:-4px}
 .wkd{grid-template-columns:1fr;gap:20px;padding:32px 0}
-.wkd-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.wkd .wkd-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .wkd-mood{margin-top:0}
 .wki{grid-template-columns:1fr;gap:4px}
+.wki-host{padding:22px 20px}
 .wki-t{padding-top:0}
-.wki-p::before{left:-12px}
-.wki-sub b{min-width:124px}
+.wki-sub li{grid-template-columns:104px 1fr}
 .wk-days{margin:0 -20px 16px;padding:10px 20px}
 }
-@media(prefers-reduced-motion:reduce){.wk-sw-k,.wk-sw-t{transition:none}}
+@media(prefers-reduced-motion:reduce){.wk-sw-k,.wk-sw-t,.wk-mc{transition:none}}
 </style>
 </head>
 <body>
@@ -382,19 +410,47 @@ img{max-width:100%;display:block}
   <div class="wk-in">
     <div class="sl rv" style="color:var(--gold-deep)">November 14 &ndash; 21</div>
     <h2 class="shd rv d1" style="margin-bottom:20px">Your Wedding Week</h2>
-    <p class="wk-lede rv d2">Some of you land Saturday. Some of you stay through the next one. Here&rsquo;s the whole week: what we&rsquo;re hosting, plus everything else happening at Casa de Campo while you&rsquo;re here.</p>
+    <p class="wk-lede rv d2">Some of you land Saturday. Some of you stay through the next one. Here&rsquo;s the whole week: when we need you, and everything you can do when we don&rsquo;t.</p>
     <div class="wk-bar rv">
       <button type="button" class="wk-sw" id="wkSw" role="switch" aria-checked="false" aria-describedby="wkHint"><span class="wk-sw-t" aria-hidden="true"><span class="wk-sw-k"></span></span><span>I&rsquo;m in the wedding party</span></button>
-      <p class="wk-hint" id="wkHint">Adds your rehearsal events and getting-ready schedule to the week.</p>
-      <div class="wk-key" aria-label="Legend"><span class="wkt wkt-h">Celebrate with us</span><span class="wkt wkt-p">Wedding party</span><span class="wkt wkt-o">Optional</span></div>
+      <p class="wk-hint" id="wkHint">Adds your rehearsal events and getting-ready schedule.</p>
+    </div>
+
+    <div class="wk-must rv">
+      <div class="wk-eye">Mark your calendar</div>
+      <h3 class="wk-h3">Where we&rsquo;ll need you</h3>
+      <p class="wk-sub">Everything else this week is yours.</p>
+      <div class="wk-mg">
+        <a class="wk-mc wk-mc-p" href="#d16"><span class="wk-mc-d">Mon &middot; Nov 16 &middot; 7 PM</span><span class="wk-mc-n">Rehearsal Dinner</span><span class="wk-mc-s">La Casita &middot; Wedding party + significant others</span></a>
+        <a class="wk-mc wk-mc-p" href="#d17"><span class="wk-mc-d">Tue &middot; Nov 17 &middot; 10 AM</span><span class="wk-mc-n">Wedding Rehearsal</span><span class="wk-mc-s">Wedding party &middot; About one hour</span></a>
+        <a class="wk-mc" href="#d17"><span class="wk-mc-d">Tue &middot; Nov 17 &middot; 7 PM</span><span class="wk-mc-n">Beach Welcome Party</span><span class="wk-mc-s">Minitas Beach &middot; Elevated neutrals</span></a>
+        <a class="wk-mc" href="#d18"><span class="wk-mc-d">Wed &middot; Nov 18 &middot; 5 PM</span><span class="wk-mc-n">The Wedding</span><span class="wk-mc-s">Ceremony, cocktails &amp; reception &middot; Black tie</span></a>
+      </div>
+    </div>
+
+    <div class="wk-perks rv" id="perks">
+      <div class="wk-eye">Whenever we&rsquo;re not celebrating</div>
+      <h3 class="wk-h3">Your Time at Casa</h3>
+      <p class="wk-sub">Any hour without a wedding event is yours. Here&rsquo;s what&rsquo;s waiting.</p>
+      <ul class="wk-pg">
+        <li><em>Free &middot; Every day</em><b>Horseback Riding</b><span>Ride any day of your stay.</span></li>
+        <li><em>Free &middot; Once per stay</em><b>Skeet Shooting</b><span>One round on us.</span></li>
+        <li><b>Golf</b><span>Three championship courses, including Teeth of the Dog.</span></li>
+        <li><b>The Spa</b><span>20% off for guests booked in our room block.</span></li>
+        <li><b>Pool &amp; Beach</b><span>Resort pools and Minitas Beach.</span></li>
+        <li><b>Work Out</b><span>Get a session in at the fitness center.</span></li>
+        <li><b>Explore</b><span>Altos de Chav&oacute;n, the Marina, and the river.</span></li>
+        <li><b>Resort Events</b><span>Concerts, food, and nightlife. Listed day by day below.</span></li>
+      </ul>
+      <p class="wk-pn">Book riding, shooting, golf, and the spa through the Casa de Campo concierge. Or just relax somewhere beautiful.</p>
     </div>
 
     <nav class="wk-days" aria-label="Jump to a day">
       <a href="#d14" data-d="14"><b>Sat</b><i>14</i></a>
       <a href="#d15" data-d="15"><b>Sun</b><i>15</i></a>
-      <a href="#d16" data-d="16"><b>Mon</b><i>16</i></a>
-      <a href="#d17" data-d="17"><b>Tue</b><i>17</i></a>
-      <a href="#d18" data-d="18" class="is-big"><b>Wed</b><i>18</i></a>
+      <a href="#d16" data-d="16" class="has-party"><b>Mon</b><i>16</i></a>
+      <a href="#d17" data-d="17" class="has-host"><b>Tue</b><i>17</i></a>
+      <a href="#d18" data-d="18" class="has-host"><b>Wed</b><i>18</i></a>
       <a href="#d19" data-d="19"><b>Thu</b><i>19</i></a>
       <a href="#d20" data-d="20"><b>Fri</b><i>20</i></a>
       <a href="#d21" data-d="21"><b>Sat</b><i>21</i></a>
@@ -404,7 +460,7 @@ img{max-width:100%;display:block}
       <li class="wkd" id="d14" data-d="14">
         <div class="wkd-h"><span class="wkd-dw">Saturday</span><span class="wkd-dt">Nov 14</span><span class="wkd-mood">Early arrivals</span><span class="wkt wkt-h wkd-today">Today</span></div>
         <ul class="wki-l">
-          <li class="wki"><div class="wki-t">All day</div><div class="wki-b"><h3>Settle In</h3><p>No plans from us yet. Check in, find the pool, and let the week start slow.</p></div></li>
+          <li class="wki wki-free"><div class="wki-t">All day</div><div class="wki-b"><h3>Free time</h3><p>Check in, find the pool, and let the week start slow. <a href="#perks">Your options</a></p></div></li>
           <li class="wki"><div class="wki-t">11:00 AM</div><div class="wki-b"><h3>Christmas Wreath Workshop</h3><p>Villa Minuty, La Ca&ntilde;a &middot; <a href="https://www.casadecampo.com.do/events/christmas-wreath-workshop/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Resort event</span></div></div></li>
           <li class="wki"><div class="wki-t">10:00 PM</div><div class="wki-b"><h3>Marina 25th Anniversary Kick-Off</h3><p>Plaza Portofino, Marina Casa de Campo &middot; <a href="https://www.casadecampo.com.do/events/marina-casa-de-campo-25th-anniversary-kick-off/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Resort event</span></div></div></li>
           <li class="wki"><div class="wki-t">10:00 PM<small>till late</small></div><div class="wki-b"><h3>Genesis Nightclub</h3><p>Altos de Chav&oacute;n &middot; No shorts, swimwear, hats, or sleeveless shirts &middot; <a href="https://www.casadecampo.com.do/dining/bars-nightlife/genesis-nightclub/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Nightlife</span></div></div></li>
@@ -414,37 +470,34 @@ img{max-width:100%;display:block}
       <li class="wkd" id="d15" data-d="15">
         <div class="wkd-h"><span class="wkd-dw">Sunday</span><span class="wkd-dt">Nov 15</span><span class="wkd-mood">Explore</span><span class="wkt wkt-h wkd-today">Today</span></div>
         <ul class="wki-l">
-          <li class="wki"><div class="wki-t">All day</div><div class="wki-b"><h3>Find Your Corner of Casa</h3><p>A free day. A few places we&rsquo;d start:</p><div class="wki-acts"><span>Minitas Beach</span><span>Altos de Chav&oacute;n</span><span>The Marina</span><span>The Spa &middot; 20% off*</span></div><div class="wki-tags"><span class="wkt wkt-o">Optional</span></div></div></li>
+          <li class="wki wki-free"><div class="wki-t">All day</div><div class="wki-b"><h3>Free time</h3><p>Ride, shoot, golf, beach, spa, or nothing at all. <a href="#perks">Your options</a></p></div></li>
         </ul>
       </li>
 
       <li class="wkd" id="d16" data-d="16">
         <div class="wkd-h"><span class="wkd-dw">Monday</span><span class="wkd-dt">Nov 16</span><span class="wkd-mood">Free day</span><span class="wkt wkt-h wkd-today">Today</span></div>
         <ul class="wki-l">
-          <li class="wki"><div class="wki-t">All day</div><div class="wki-b"><h3>Rest &amp; Explore</h3><p>Nothing on the calendar. Beach, golf, spa, or nothing at all.</p><div class="wki-tags"><span class="wkt wkt-o">Optional</span></div></div></li>
-          <li class="wki wki-p"><div class="wki-t">7:00 PM</div><div class="wki-b"><h3>Rehearsal Dinner</h3><p>La Casita &middot; Significant others are welcome and invited.</p><div class="wki-tags"><span class="wkt wkt-p">Wedding party &middot; Required</span><span class="wkt wkt-o">+ Significant others</span></div></div></li>
+          <li class="wki wki-free"><div class="wki-t">All day</div><div class="wki-b"><h3>Free time</h3><p>Ride, shoot, golf, beach, spa, or nothing at all. <a href="#perks">Your options</a></p></div></li>
+          <li class="wki wki-p wki-host"><div class="wki-t">7:00 PM</div><div class="wki-b"><h3>Rehearsal Dinner</h3><p>La Casita &middot; Significant others are welcome and invited.</p><div class="wki-tags"><span class="wkt wkt-p">Wedding party &middot; Please be there</span></div></div></li>
         </ul>
       </li>
 
       <li class="wkd" id="d17" data-d="17">
         <div class="wkd-h"><span class="wkd-dw">Tuesday</span><span class="wkd-dt">Nov 17</span><span class="wkd-mood">Welcome night</span><span class="wkt wkt-h wkd-today">Today</span></div>
         <ul class="wki-l">
-          <li class="wki wki-p"><div class="wki-t">10:00 AM</div><div class="wki-b"><h3>Wedding Rehearsal</h3><p>About one hour. Location shared by our planner.</p><div class="wki-tags"><span class="wkt wkt-p">Wedding party &middot; Required</span></div></div></li>
-          <li class="wki"><div class="wki-t">Afternoon</div><div class="wki-b"><h3>Free Afternoon</h3><p>Pick your pace. Times aren&rsquo;t set yet; book through the Casa de Campo concierge.</p><div class="wki-acts"><span>Skeet shooting</span><span>Horseback riding</span><span>Pool</span><span>The Spa &middot; 20% off*</span></div><div class="wki-tags"><span class="wkt wkt-o">Optional</span></div></div></li>
-          <li class="wki wki-feat"><div class="wki-t">7:00 PM</div><div class="wki-b"><h3>Beach Welcome Party</h3><p>Minitas Beach &middot; <a href="#attire-beach">Elevated neutrals</a>. Look fly, stay relaxed. White is welcome tonight.</p><div class="wki-tags"><span class="wkt wkt-h">Celebrate with us</span></div></div></li>
+          <li class="wki wki-p wki-host"><div class="wki-t">10:00 AM</div><div class="wki-b"><h3>Wedding Rehearsal</h3><p>About one hour. Location shared by our planner.</p><div class="wki-tags"><span class="wkt wkt-p">Wedding party &middot; Please be there</span></div></div></li>
+          <li class="wki wki-free"><div class="wki-t">Daytime</div><div class="wki-b"><h3>Free time</h3><p>A good day to ride, shoot, or book the spa before tonight. <a href="#perks">Your options</a></p></div></li>
+          <li class="wki wki-host"><div class="wki-t">7:00 PM</div><div class="wki-b"><h3>Beach Welcome Party</h3><p>Minitas Beach &middot; <a href="#attire-beach">Elevated neutrals</a>. Look fly, stay relaxed. White is welcome tonight.</p><div class="wki-tags"><span class="wkt wkt-h">Celebrate with us</span></div></div></li>
         </ul>
       </li>
 
       <li class="wkd" id="d18" data-d="18">
         <div class="wkd-h"><span class="wkd-dw">Wednesday</span><span class="wkd-dt">Nov 18</span><span class="wkd-mood">The wedding</span><span class="wkt wkt-h wkd-today">Today</span></div>
         <ul class="wki-l">
-          <li class="wki wki-p"><div class="wki-t">Morning</div><div class="wki-b"><h3>Groomsmen Getting Ready</h3><ul class="wki-sub"><li><b>9:30&ndash;11:30 AM</b>Groom&rsquo;s haircut</li><li><b>11:30 AM</b>Groomsmen join the groom</li><li><b>1:45 PM</b>Everyone dressed &amp; ready</li><li><b>2:00 PM</b>Wedding photos begin</li></ul><div class="wki-tags"><span class="wkt wkt-p">Groomsmen</span><span class="wkt wkt-o">Proposed &middot; Confirm with planner</span></div></div></li>
+          <li class="wki wki-p wki-host"><div class="wki-t">Morning</div><div class="wki-b"><h3>Groomsmen Getting Ready</h3><ul class="wki-sub"><li><b>9:30&ndash;11:30 AM</b>Groom&rsquo;s haircut</li><li><b>11:30 AM</b>Groomsmen join the groom</li><li><b>1:45 PM</b>Everyone dressed &amp; ready</li><li><b>2:00 PM</b>Wedding photos begin</li></ul><div class="wki-tags"><span class="wkt wkt-p">Groomsmen</span><span class="wkt wkt-o">Proposed &middot; Confirm with planner</span></div></div></li>
           <li class="wki wki-p"><div class="wki-t">Morning</div><div class="wki-b"><h3>Bridesmaids Getting Ready</h3><p>Schedule coming soon.</p><div class="wki-tags"><span class="wkt wkt-p">Bridesmaids</span></div></div></li>
-          <li class="wki"><div class="wki-t">~4:00 PM<small>Time TBC</small></div><div class="wki-b"><h3>Shuttles to the Ceremony</h3><p>Pickup from the hotel lobby. Exact times coming soon.</p></div></li>
-          <li class="wki wki-feat"><div class="wki-t">5:00 PM</div><div class="wki-b"><h3>The Ceremony</h3><p><a href="#attire-wedding">Black Tie Elegance</a></p><div class="wki-tags"><span class="wkt wkt-h">Celebrate with us</span></div></div></li>
-          <li class="wki"><div class="wki-t">6:00 PM</div><div class="wki-b"><h3>Cocktail Hour</h3></div></li>
-          <li class="wki"><div class="wki-t">7:00 PM</div><div class="wki-b"><h3>Transportation to the Reception</h3></div></li>
-          <li class="wki wki-feat"><div class="wki-t">7:00 PM<small>to midnight</small></div><div class="wki-b"><h3>The Reception</h3><p>La Casita</p><div class="wki-tags"><span class="wkt wkt-h">Celebrate with us</span></div></div></li>
+          <li class="wki wki-free"><div class="wki-t">Until 4 PM</div><div class="wki-b"><h3>Free time</h3><p>Take it easy. Save your energy for tonight. <a href="#perks">Your options</a></p></div></li>
+          <li class="wki wki-host"><div class="wki-t">5:00 PM</div><div class="wki-b"><h3>The Wedding</h3><ul class="wki-sub"><li><b>~4:00 PM</b>Shuttles from the hotel lobby (time TBC)</li><li><b>5:00 PM</b>Ceremony</li><li><b>6:00 PM</b>Cocktail hour</li><li><b>7:00 PM</b>Transportation to the reception</li><li><b>7 PM&ndash;Midnight</b>Reception at La Casita</li></ul><p><a href="#attire-wedding">Black Tie Elegance</a></p><div class="wki-tags"><span class="wkt wkt-h">Celebrate with us</span></div></div></li>
         </ul>
       </li>
 
@@ -452,8 +505,8 @@ img{max-width:100%;display:block}
         <div class="wkd-h"><span class="wkd-dw">Thursday</span><span class="wkd-dt">Nov 19</span><span class="wkd-mood">The day after</span><span class="wkt wkt-h wkd-today">Today</span></div>
         <ul class="wki-l">
           <li class="wki"><div class="wki-t">All day</div><div class="wki-b"><h3>Beach Day</h3><p>We reserved cabanas for our group. Come recover with us.</p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; All guests</span></div></div></li>
-          <li class="wki"><div class="wki-t">All day</div><div class="wki-b"><h3>The Spa &middot; 20% Off*</h3><p>A good day for it.</p><div class="wki-tags"><span class="wkt wkt-o">Optional</span></div></div></li>
-          <li class="wki"><div class="wki-t">Evening</div><div class="wki-b"><h3>ALMA Festival Opens</h3><p>Three days of Spanish food, flamenco, and culture across the resort &middot; <a href="https://www.casadecampo.com.do/events/alma-casa-de-campo/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Resort event</span></div></div></li>
+          <li class="wki wki-free"><div class="wki-t">All day</div><div class="wki-b"><h3>Free time</h3><p>Spa day, anyone? <a href="#perks">Your options</a></p></div></li>
+          <li class="wki"><div class="wki-t">Evening</div><div class="wki-b"><h3>ALMA Festival Opens</h3><p>Three days of Spanish food, flamenco, and culture &middot; <a href="https://www.casadecampo.com.do/events/alma-casa-de-campo/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Resort event</span></div></div></li>
           <li class="wki"><div class="wki-t">10:00 PM<small>till late</small></div><div class="wki-b"><h3>Genesis Nightclub</h3><p>Altos de Chav&oacute;n &middot; <a href="https://www.casadecampo.com.do/dining/bars-nightlife/genesis-nightclub/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Nightlife</span></div></div></li>
         </ul>
       </li>
@@ -461,6 +514,7 @@ img{max-width:100%;display:block}
       <li class="wkd" id="d20" data-d="20">
         <div class="wkd-h"><span class="wkd-dw">Friday</span><span class="wkd-dt">Nov 20</span><span class="wkd-mood">Departures begin</span><span class="wkt wkt-h wkd-today">Today</span></div>
         <ul class="wki-l">
+          <li class="wki wki-free"><div class="wki-t">All day</div><div class="wki-b"><h3>Free time</h3><p>One more ride, one more round. <a href="#perks">Your options</a></p></div></li>
           <li class="wki"><div class="wki-t">7:00 PM</div><div class="wki-b"><h3>ALMA: Gastronomy &amp; Flamenco</h3><p>Seated dinner with live flamenco &middot; Marina Riverside Center &middot; Tickets through the organizer &middot; <a href="https://www.casadecampo.com.do/events/alma-casa-de-campo/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Ticketed</span></div></div></li>
           <li class="wki"><div class="wki-t">7:00&ndash;11:00 PM</div><div class="wki-b"><h3>Night Golf</h3><p>Glow-in-the-dark golf at the Teeth of the Dog driving range &middot; <a href="https://www.casadecampo.com.do/events/night-golf/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Resort event</span></div></div></li>
           <li class="wki"><div class="wki-t">10:00 PM<small>till late</small></div><div class="wki-b"><h3>Genesis Nightclub</h3><p>Altos de Chav&oacute;n &middot; <a href="https://www.casadecampo.com.do/dining/bars-nightlife/genesis-nightclub/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Nightlife</span></div></div></li>
@@ -470,12 +524,13 @@ img{max-width:100%;display:block}
       <li class="wkd" id="d21" data-d="21">
         <div class="wkd-h"><span class="wkd-dw">Saturday</span><span class="wkd-dt">Nov 21</span><span class="wkd-mood">Last night</span><span class="wkt wkt-h wkd-today">Today</span></div>
         <ul class="wki-l">
+          <li class="wki wki-free"><div class="wki-t">All day</div><div class="wki-b"><h3>Free time</h3><p>Soak up the last of it. <a href="#perks">Your options</a></p></div></li>
           <li class="wki"><div class="wki-t">7:00 PM</div><div class="wki-b"><h3>ALMA: Feria de Andaluc&iacute;a</h3><p>Altos de Chav&oacute;n Amphitheater &middot; Tickets through the organizer &middot; <a href="https://www.casadecampo.com.do/events/alma-casa-de-campo/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Ticketed</span></div></div></li>
           <li class="wki"><div class="wki-t">10:00 PM<small>till late</small></div><div class="wki-b"><h3>Genesis Nightclub</h3><p>One more for the road &middot; <a href="https://www.casadecampo.com.do/dining/bars-nightlife/genesis-nightclub/" target="_blank" rel="noopener">Details</a></p><div class="wki-tags"><span class="wkt wkt-o">Optional &middot; Nightlife</span></div></div></li>
         </ul>
       </li>
     </ol>
-    <p class="wk-note">*20% off at the spa for guests booked in our room block. Resort events are hosted by Casa de Campo, not by us. Some need tickets or reservations, and dates can change, so check the links or ask the concierge.</p>
+    <p class="wk-note">Resort events are hosted by Casa de Campo, not by us. Some need tickets or reservations, and dates can change, so check the links or ask the concierge.</p>
   </div>
 </section>
 
