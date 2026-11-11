@@ -1,3 +1,4 @@
+(function(){if(document.body.classList.contains('sub'))return;var m={'#details':'week.html','#week':'week.html','#attire':'attire.html','#attire-beach':'attire.html#attire-beach','#attire-wedding':'attire.html#attire-wedding','#travel':'travel.html','#story':'story.html'};var t=m[location.hash];if(t)location.replace(t)})();
 (function(){
 var n=document.getElementById('nav'),sub=document.body.classList.contains('sub');
 function ns(){n.classList.toggle('scrolled',sub||window.scrollY>80)}
